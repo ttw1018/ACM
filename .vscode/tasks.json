@@ -5,12 +5,11 @@
             "label": "build",
             "command": "clang++",
             "args": [
-                "-g",
                 "-O3",
                 "-static",
                 "${file}",
                 "-o",
-                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\build\\a.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

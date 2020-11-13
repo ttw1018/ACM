@@ -22,4 +22,10 @@
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "C_Cpp.clang_format_style": "LLVM",
     "search.followSymlinks": false,
+    "C_Cpp.vcFormat.indent.braces": true,
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.indent.caseLabels": true,
+    "C_Cpp.vcFormat.indent.gotoLabels": "leftmostColumn",
+    "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+    "C_Cpp.vcFormat.indent.preserveComment": true,
 }

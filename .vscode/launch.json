@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         {
             "name": "clang++.exe",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\build\\a.exe",
             "args": ["<in", "&", ">out"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
