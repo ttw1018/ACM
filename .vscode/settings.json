@@ -28,4 +28,7 @@
     "C_Cpp.vcFormat.indent.gotoLabels": "leftmostColumn",
     "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
     "C_Cpp.vcFormat.indent.preserveComment": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
 }
