@@ -3,7 +3,7 @@
     "editor.scrollBeyondLastLine": false,
     "C_Cpp.autocomplete": "Disabled",
     "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "C_Cpp.intelliSenseEngine": "Disabled",
     "clangd.semanticHighlighting": true,
     "editor.mouseWheelZoom": true,
@@ -31,4 +31,5 @@
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
+    "editor.tabSize": 2,
 }
