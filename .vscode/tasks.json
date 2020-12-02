@@ -3,16 +3,19 @@
         {
             "type": "shell",
             "label": "build",
-            "command": "clang++",
+            "command": "g++",
             "args": [
+                "-g",
                 "-O3",
+                "-pthread",
                 "-static",
+                "-std=c++11",
                 "${file}",
                 "-o",
-                "${fileDirname}\\build\\a.exe"
+                "${fileDirname}\\a.exe"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "D:\\mingw64\\bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -21,15 +24,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            
+            "detail": "Generated task by Debugger"
         }
     ],
     "version": "2.0.0"
