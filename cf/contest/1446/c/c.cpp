@@ -16,9 +16,19 @@ typedef long long ll;
 //const int mod = 998244353;
 
 const int maxn = 1e5 + 5;
+int a[maxn];
 
 int main()
 {
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++) {
+        i
+    }
+    
 
     return 0;
 }
