@@ -3,3 +3,4 @@ a.out
 in
 makefile
 cf/contest/*/*/*.txt
+.DS_Store
