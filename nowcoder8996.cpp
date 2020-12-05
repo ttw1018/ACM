@@ -21,14 +21,6 @@ typedef long long ll;
 
 
 int main () {
-    ll n;
-    cin >> n;
-
-    n--;
-
-
-
-
 
 
 
