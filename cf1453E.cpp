@@ -26,25 +26,32 @@ int dep[maxn];
 int ma[maxn];
 int mi[maxn];
 int val[maxn];
+int ans = 0;
 
-void dfs(int x, int fa)
-{
+void dfs (int now, int fa) {
+    val[now] = 0;
     vector<int> v;
-    for (auto to : e[x]) {
-        if (to != fa) {
-            dfs(to, x);
-            v.push_back(val[to] + 1);
+    for (auto i : e[now]) {
+        if (i != fa) {
+            dfs(i, now);
+            v.push_back(val[i] + 1);
         }
     }
-    if (v.size() == 0)
-        val[x] = 1;
-    else if (v.size() == 1) {
-        val[x] = v[0];
+    sort(v.begin(), v.end());
+    if (v.size() == 1) {
+        val[now] = v[0];
+        ans = max(ans, val[now]);
     }
-    else {
-        val[x] = v[v.size() - 2] + 1;
+    else if (v.size() > 1 && now != 1) {
+        val[now] = v[0];
+        ans = max(ans, v[v.size() - 1] + 1);
     }
+    else if (v.size() > 1 && now == 1) {
+        ans = max(ans, max(v[v.size() - 2] + 1, v[v.size() - 1]));
+    }
+//    cout << now << "  " << val[now] << " " << ans << endl;
 }
+
 
 int main()
 {
@@ -55,7 +62,6 @@ int main()
         cin >> n;
         for (int i = 1; i <= n; i++) {
             e[i].clear();
-            dep[i] = ma[i] = 0;
         }
         for (int i = 1; i < n; i++) {
             int a, b;
@@ -63,8 +69,10 @@ int main()
             e[a].push_back(b);
             e[b].push_back(a);
         }
+        ans = 0;
         dfs(1, 0);
-        cout << val[1] << endl;
+        cout << ans << endl;
+
     }
     return 0;
 }
