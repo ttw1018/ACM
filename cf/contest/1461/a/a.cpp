@@ -17,13 +17,18 @@ typedef long long ll;
 
 const int maxn = 1e5 + 5;
 
-<<<<<<< HEAD
-int main()
-{
+int main() {
 
-
+  int t;
+  cin >> t;
+  while (t--) {
+    int n, k;
+    cin >> n >> k;
+    for (int i = 1; i <= k; i++)
+      cout << "a";
+    for (int i = 1; i <= n - k; i++)
+      cout << char('a' + i % 3);
+    cout << endl;
+  }
   return 0;
 }
-=======
-int main() { return 0; }
->>>>>>> c4a3f4863e4c3356d30d9b4eb96866645a6f2897
