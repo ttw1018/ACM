@@ -57,8 +57,7 @@ int main() {
 
     if (cnt1 == 2) {
         cout << 2 << endl;
-    }
-    else {
+    } else {
         cout << 1 << endl;
     }
 

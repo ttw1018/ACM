@@ -20,7 +20,7 @@ bool check(ll x, ll y, ll r) {
     return x * x + y * y <= r;
 }
 
-int main () {
+int main() {
     int t;
     cin >> t;
     while (t--) {
@@ -39,8 +39,6 @@ int main () {
 
 
     }
-
-
 
 
     return 0;

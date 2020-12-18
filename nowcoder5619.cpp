@@ -32,7 +32,7 @@ int get(int x) {
 
 class Solution {
 public:
-    int minimumIncompatibility(vector<int>& nums, int k) {
+    int minimumIncompatibility(vector<int> &nums, int k) {
         int n = nums.size();
         if (n % k) return -1;
         map<int, int> w;
@@ -74,10 +74,8 @@ public:
 };
 
 
-int main () {
+int main() {
     string s;
-
-
 
 
     return 0;

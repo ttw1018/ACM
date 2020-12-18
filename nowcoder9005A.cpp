@@ -21,7 +21,7 @@ public:
 
     ll qp(ll a, ll b) {
         ll ans = 1;
-        while(b) {
+        while (b) {
             if (b & 1) {
                 ans = ans * a % mod;
             }
@@ -31,22 +31,22 @@ public:
         return ans;
     }
 
-    ll get (ll l, ll r) {
+    ll get(ll l, ll r) {
         return (l + r) % mod * inv % mod * ((r - l + 1) % mod) % mod;
     }
+
     long long tree4(long long n) {
         ll ans = 0;
         ll l = 1;
         inv = qp(2, mod - 2);
-        for (int i = 0; ; i++) {
+        for (int i = 0;; i++) {
             ll r = l - 1 + (ll(1) << i);
 //            cout << l << " " << r << endl;
             if (n >= r) {
                 ans = get(l, r) * (i + 1) % mod + ans;
                 ans %= mod;
                 l = r + 1;
-            }
-            else {
+            } else {
                 ans = get(l, n) * (i + 1) % mod + ans;
                 ans %= mod;
                 break;
@@ -56,7 +56,7 @@ public:
     }
 };
 
-int main () {
+int main() {
     Solution now = Solution();
     cout << now.tree4(2);
 

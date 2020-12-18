@@ -16,7 +16,7 @@ int a[maxn];
 vector<int> v[maxn];
 int ans[maxn];
 
-int main () {
+int main() {
     int n;
     cin >> n;
     for (int i = 2; i <= n; i++) {
@@ -44,8 +44,7 @@ int main () {
             cin >> x;
             ans[3] += x;
             ans[1] = (a[3] ^ ans[3]);
-        }
-        else {
+        } else {
             ans[2] = 0;
             cout << "AND 1 " << 2 << endl;
             cout.flush();
@@ -58,8 +57,7 @@ int main () {
             ans[2] += x;
             ans[1] = a[2] ^ ans[2];
         }
-    }
-    else {
+    } else {
         int a1 = v[pos][0];
         int a2 = v[pos][1];
         cout << "AND " << a1 << " " << a2 << endl;
@@ -76,12 +74,6 @@ int main () {
         cout << ans[i] << " ";
     }
     cout << endl;
-
-
-
-    
-    
-
 
 
     return 0;

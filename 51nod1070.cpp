@@ -21,7 +21,7 @@ typedef long long ll;
 
 ll f[50];
 
-int main () {
+int main() {
     int T;
     cin >> T;
     f[0] = 1;
@@ -31,7 +31,7 @@ int main () {
     }
 //    cout << f[49] << endl;
     a:
-    while(T--) {
+    while (T--) {
         int n;
         cin >> n;
         if (n == 1) {

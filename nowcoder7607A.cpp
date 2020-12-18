@@ -11,10 +11,11 @@ int prime[maxn];
 
 int tot;
 ll sum[maxn];
-void init () {
+
+void init() {
     for (int i = 2; i < maxn; i++) {
         if (!vis[i]) {
-            prime[tot++] = i;    
+            prime[tot++] = i;
         }
         for (int j = 0; j < tot && i * prime[j] < maxn; j++) {
             vis[i * prime[j]] = 1;
@@ -28,7 +29,7 @@ void init () {
             }
         }
     }
-    
+
     for (int i = 1; i < maxn; i++) {
         if (sum[i]) sum[i] += sum[i - 1];
         else sum[i] = sum[i - 1] + 1;
@@ -36,7 +37,7 @@ void init () {
 }
 
 
-int main () {
+int main() {
     init();
     int l, r;
     scanf("%d%d", &l, &r);

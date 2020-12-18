@@ -24,7 +24,7 @@ int find(int x) {
     return x == fa[x] ? x : fa[x] = find(fa[x]);
 }
 
-void add (int x, int y) {
+void add(int x, int y) {
     x = find(x);
     y = find(y);
     if (x != y) {
@@ -33,7 +33,7 @@ void add (int x, int y) {
     }
 }
 
-int main () {
+int main() {
     int n;
     cin >> n;
     for (int i = 1; i <= n; i++) fa[i] = i;

@@ -11,7 +11,7 @@ bool vis[maxn];
 int tot = 0;
 int sum[maxn];
 
-void init () {
+void init() {
     mu[1] = 1;
     for (int i = 2; i < maxn; i++) {
         if (!vis[i]) {
@@ -37,7 +37,7 @@ int get(int l, int r, int d) {
     return v[d][r - 1] - v[d][l - 2];
 }
 
-int main () {
+int main() {
     init();
     for (int i = 1; i < maxn; i++) {
         for (int j = i; j < maxn; j += i) {
@@ -71,10 +71,6 @@ int main () {
             }
         }
     }
-
-
-
-
 
 
     int T;

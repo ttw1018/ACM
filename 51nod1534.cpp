@@ -22,17 +22,18 @@ typedef long long ll;
 #define B cout << "Vasiliy" << endl; return 0;
 #define A cout << "Polycarp" << endl; return 0;
 
-int d1 (int x1, int y1, int x2, int y2) {
+int d1(int x1, int y1, int x2, int y2) {
     return abs(x1 - x2) + abs(y1 - y2);
 }
-int d2 (int x1, int y1, int x2, int y2) {
+
+int d2(int x1, int y1, int x2, int y2) {
     int x = abs(x2 - x1);
     int y = abs(y2 - y1);
     return min(x, y) + abs(x - y);
 }
 
 
-int main () {
+int main() {
     int x1, x2, y1, y2;
     cin >> x1 >> y1 >> x2 >> y2;
 
@@ -51,12 +52,6 @@ int main () {
         }
     }
     A;
-
-
-
-
-
-
 
 
     return 0;

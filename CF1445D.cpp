@@ -21,7 +21,8 @@ const int mod = 998244353;
 int n;
 bool vis[maxn];
 int cnt[100][100];
-void dfs (int x, int len) {
+
+void dfs(int x, int len) {
     if (len == n) {
 //        for (int i = 1; i <= 2 * n; i++) {
 //            if (vis[i])
@@ -34,16 +35,14 @@ void dfs (int x, int len) {
 //            }
 //        }
         int i = 1, j = 2 * n;
-        for ( ;i <= 2 * n && j >= 1; ) {
+        for (; i <= 2 * n && j >= 1;) {
             if (vis[i] && !vis[j]) {
                 cnt[i][j]++;
                 i++;
                 j--;
-            }
-            else if (vis[i]) {
+            } else if (vis[i]) {
                 j--;
-            }
-            else i++;
+            } else i++;
         }
         return;
     }
@@ -57,7 +56,7 @@ void dfs (int x, int len) {
 ll a[maxn];
 ll c[maxn], inv[maxn];
 
-void init () {
+void init() {
     c[0] = 1;
     inv[1] = 1;
     c[1] = 1;
@@ -70,7 +69,7 @@ void init () {
     }
 }
 
-int main () {
+int main() {
     cin >> n;
     for (int i = 1; i <= 2 * n; i++) {
         cin >> a[i];

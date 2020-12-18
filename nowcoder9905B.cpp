@@ -63,7 +63,7 @@ public:
     }
 };
 
-int main () {
+int main() {
     Solution now = Solution();
     cout << now.Maxsumforknumers("345", 2) << endl;
     cout << now.Maxsumforknumers("233333", 3);

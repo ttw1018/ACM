@@ -23,7 +23,7 @@ const int maxn = 100005;
 ll a[maxn];
 
 
-ll qp (ll a, ll b) {
+ll qp(ll a, ll b) {
     ll ans = 1;
     while (b) {
         if (b & 1) {
@@ -36,6 +36,7 @@ ll qp (ll a, ll b) {
 }
 
 ll c1[maxn], inv1, c2[maxn], inv2;
+
 void init() {
     c1[0] = 1;
     for (int i = 1; i < maxn; i++) {
@@ -52,7 +53,7 @@ void init() {
 map<ll, int> vis1, vis2;
 
 
-int main () {
+int main() {
     int n;
     init();
     while (~scanf("%d", &n)) {
@@ -116,8 +117,6 @@ int main () {
                 vis2[now2] = 1;
             }
         }
-
-
 
 
         cout << cnt << endl;

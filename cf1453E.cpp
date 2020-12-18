@@ -28,7 +28,7 @@ int mi[maxn];
 int val[maxn];
 int ans = 0;
 
-void dfs (int now, int fa) {
+void dfs(int now, int fa) {
     val[now] = 0;
     vector<int> v;
     for (auto i : e[now]) {
@@ -41,20 +41,17 @@ void dfs (int now, int fa) {
     if (v.size() == 1) {
         val[now] = v[0];
         ans = max(ans, val[now]);
-    }
-    else if (v.size() > 1 && now != 1) {
+    } else if (v.size() > 1 && now != 1) {
         val[now] = v[0];
         ans = max(ans, v[v.size() - 1] + 1);
-    }
-    else if (v.size() > 1 && now == 1) {
+    } else if (v.size() > 1 && now == 1) {
         ans = max(ans, max(v[v.size() - 2] + 1, v[v.size() - 1]));
     }
 //    cout << now << "  " << val[now] << " " << ans << endl;
 }
 
 
-int main()
-{
+int main() {
     int t;
     cin >> t;
     while (t--) {

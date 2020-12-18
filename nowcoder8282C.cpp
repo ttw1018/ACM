@@ -15,23 +15,24 @@ using namespace std;
 const int maxn = 1e6 + 5;
 
 int a[maxn];
+
 struct point {
     double x, y;
 
-    point (double a = 0, double b = 0) : x(a), y(b) {}
+    point(double a = 0, double b = 0) : x(a), y(b) {}
 
-    point operator - (const point a) {
+    point operator-(const point a) {
         return point(x - a.x, y - a.y);
     }
 };
 
 point st[maxn];
 
-double cross (point a, point b) {
+double cross(point a, point b) {
     return a.x * b.y - a.y * b.x;
 }
 
-int main () {
+int main() {
 
     int n;
 
@@ -52,7 +53,7 @@ int main () {
     st[++cnt] = point(2, a[2]);
 
     for (int i = 3; i <= n; i++) {
-        while(cnt >= 1) {
+        while (cnt >= 1) {
             point aa = point(i, a[i]) - st[cnt];
             point b = st[cnt - 1] - st[cnt];
             if (cross(aa, b) < 0) cnt--;

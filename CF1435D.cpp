@@ -22,7 +22,7 @@ struct node {
     int id;
 } qu[maxn * 2];
 
-int main () {
+int main() {
     int n;
     cin >> n;
     int ma = n;
@@ -46,8 +46,7 @@ int main () {
             q.pop();
             cnt++;
             have.push(cnt);
-        }
-        else {
+        } else {
             int id;
             cin >> id;
             qu[i].id = id;
@@ -57,44 +56,42 @@ int main () {
                 return 0;
             }
             if (have.size()) {
-                if (have.top() != cnt && id < pre)  {
+                if (have.top() != cnt && id < pre) {
                     cout << "NO" << endl;
                     return 0;
                 }
                 ans[have.top()] = id;
                 have.pop();
                 pre = id;
-            }
-            else {
+            } else {
                 cout << "NO" << endl;
                 return 0;
             }
-            
+
             q.push(*s.begin());
             s.erase(s.begin());
         }
     }
-    
+
     int now = 1;
-    
+
     s.clear();
-    
+
     for (int i = 1; i <= 2 * n; i++) {
         if (qu[i].c == '+') {
             s.insert(ans[now++]);
-        }
-        else {
+        } else {
             if (*s.begin() != qu[i].id) {
                 cout << "NO" << endl;
                 return 0;
             }
             s.erase(s.begin());
         }
-        
+
     }
-    
+
     cout << "YES" << endl;
-    
+
     for (int i = 1; i <= n; i++) {
         if (!ans[i]) {
             ans[i] = q.top();
@@ -103,8 +100,6 @@ int main () {
         cout << ans[i] << " ";
     }
     cout << endl;
-    
-    
 
 
     return 0;

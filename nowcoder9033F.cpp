@@ -16,7 +16,7 @@ typedef long long ll;
 
 const int mod = 998244353;
 
-ll qp (ll a, ll b) {
+ll qp(ll a, ll b) {
     ll ans = 1;
     while (b) {
         if (b & 1) ans = ans * a % mod;
@@ -26,11 +26,11 @@ ll qp (ll a, ll b) {
     return ans;
 }
 
-ll get (ll a1, ll q) {
+ll get(ll a1, ll q) {
     return qp(1 - q + mod, mod - 2) * a1 % mod;
 }
 
-int main () {
+int main() {
 
     int a, b, p;
 

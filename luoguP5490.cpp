@@ -9,8 +9,10 @@ const int maxn = 2e5 + 5;
 
 struct rectangle {
     int l, r, h, v;
+
     rectangle(int a = 0, int b = 0, int c = 0, int d = 0) : l(a), r(b), h(c), v(d) {}
-    bool operator < (const rectangle now) const {
+
+    bool operator<(const rectangle now) const {
         if (h == now.h) return l < now.l;
         return h < now.h;
     }
@@ -25,7 +27,7 @@ struct node {
 vector<int> v;
 int x[maxn * 2];
 
-void build (int k, int l, int r) {
+void build(int k, int l, int r) {
     t[k].l = x[l];
     t[k].r = x[r];
     if (r - l <= 1) return;
@@ -37,8 +39,7 @@ void build (int k, int l, int r) {
 void push(int k) {
     if (t[k].cnt) {
         t[k].v = t[k].r - t[k].l;
-    }
-    else {
+    } else {
         t[k].v = t[k * 2].v + t[k * 2 + 1].v;
     }
 }
@@ -55,7 +56,7 @@ void upd(int k, int l, int r, int v) {
 }
 
 
-int main () {
+int main() {
     int n;
     cin >> n;
     for (int i = 1; i <= n; i++) {

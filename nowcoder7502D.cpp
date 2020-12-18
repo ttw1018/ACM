@@ -14,7 +14,7 @@ const int maxn = 1e5 + 5;
 
 ll a[maxn], b[maxn];
 
-ll qp (ll a, ll b) {
+ll qp(ll a, ll b) {
     ll ans = 1;
     while (b) {
         if (b & 1) ans = ans * a % mod;
@@ -24,7 +24,7 @@ ll qp (ll a, ll b) {
     return ans;
 }
 
-int main () {
+int main() {
     int n;
     ll x;
     while (~scanf("%d%lld", &n, &x)) {

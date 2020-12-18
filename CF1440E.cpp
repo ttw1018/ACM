@@ -81,7 +81,7 @@ ll que(int k, int l, int r) {
     return ans;
 }
 
-int main () {
+int main() {
     int n, q;
     cin >> n >> q;
 
@@ -95,15 +95,14 @@ int main () {
             cin >> x >> y;
             if (que(1, x) >= y) continue;
             int l = 1, r = x;
-            while(l < r) {
+            while (l < r) {
                 int m = (l + r) / 2;
                 int now = que(1, m);
                 if (now >= y) l = m + 1;
                 else r = m;
             }
             upd(1, l, x, y);
-        }
-        else {
+        } else {
             ll x, y;
             cin >> x >> y;
             int l = x, r = n;

@@ -9,21 +9,20 @@ typedef long long ll;
 
 int a[N], fa[N], pre[N * 10], tot;
 int vis[N];
-int find(int x) { 
+
+int find(int x) {
     if (x == fa[x]) {
         return x;
-    }
-    else {
+    } else {
         int now = find(fa[x]);
         pre[++tot] = x;
         fa[x] = now;
         return fa[x];
-        
+
     }
 }
 
-void add(int x, int y)
-{
+void add(int x, int y) {
     int fx = find(x);
     int fy = find(y);
     if (fx != fy) {
@@ -35,8 +34,8 @@ void add(int x, int y)
 }
 
 map<pair<int, int>, vector<pair<int, int>>> mp;
-int main()
-{
+
+int main() {
     int n, m, k;
     cin >> n >> m >> k;
 
@@ -63,7 +62,7 @@ int main()
 
             }
         } else {
-            mp[{ xx, yy }].push_back({ x, y });
+            mp[{xx, yy}].push_back({x, y});
         }
     }
     ll ans = ll(k) * (k - 1) / 2;
@@ -83,7 +82,7 @@ int main()
                 break;
             }
         }
-        while(tot > cnt) {
+        while (tot > cnt) {
             fa[pre[tot]] = pre[tot];
             tot--;
         }

@@ -15,7 +15,7 @@ using namespace std;
 typedef long long ll;
 
 
-int main () {
+int main() {
     int t;
     cin >> t;
     while (t--) {
@@ -26,7 +26,7 @@ int main () {
         cout.precision(50);
         cout << (s5 + 1) / 2 << endl;
         cout << s5 << endl;
-        if (ll (s5 + 1) * y == ll(s5 + 3) * x) cout << "B" << endl;
+        if (ll(s5 + 1) * y == ll(s5 + 3) * x) cout << "B" << endl;
         else cout << "A" << endl;
 
     }

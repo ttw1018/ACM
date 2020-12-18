@@ -19,7 +19,7 @@ const int maxn = 1e5 + 5;
 
 int a[maxn], b[maxn];
 
-int main () {
+int main() {
     int t;
     cin >> t;
     while (t--) {
@@ -39,8 +39,7 @@ int main () {
         }
         if (flag) {
             cout << "No" << endl;
-        }
-        else {
+        } else {
             cout << "Yes" << endl;
         }
 

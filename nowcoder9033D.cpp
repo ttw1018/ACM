@@ -26,7 +26,7 @@ ll ans[maxn];
 struct node {
     int l, r;
     ll v, f;
-} t[maxn  * 4];
+} t[maxn * 4];
 
 vector<int> v[maxn];
 
@@ -47,7 +47,7 @@ void down(int k) {
     t[k].f = 0;
 }
 
-void upd (int k, int l, int r, ll v) {
+void upd(int k, int l, int r, ll v) {
     if (t[k].l >= l && t[k].r <= r) {
         t[k].f += v;
         t[k].v += (t[k].r - t[k].l + 1) * v;
@@ -76,7 +76,7 @@ ll que(int k, int l, int r) {
 
 vector<question> qq[maxn];
 
-int main () {
+int main() {
     int n, m, k;
     cin >> n >> m >> k;
     for (int i = 1; i <= n; i++) {
@@ -103,7 +103,7 @@ int main () {
         }
 //        cout << l << " " << r << endl;
         if (l <= r) {
-            upd(1, l, r,1);
+            upd(1, l, r, 1);
         }
         for (auto qe : qq[i]) {
             ans[qe.id] = que(1, qe.l, qe.r);

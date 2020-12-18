@@ -16,7 +16,7 @@ const int maxn = 1e5 + 5;
 int a[205];
 int dp[205][405];
 
-int main () {
+int main() {
     int q;
     cin >> q;
     while (q--) {

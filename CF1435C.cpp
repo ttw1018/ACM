@@ -20,13 +20,14 @@ int v[maxn][10];
 
 int p[maxn];
 
-bool cmp (int a, int b) {
+bool cmp(int a, int b) {
     return a > b;
 }
 
 int c[6];
 int d[maxn];
-int main () {
+
+int main() {
     for (int i = 0; i < 6; i++) cin >> b[i];
     sort(b, b + 6);
     int all = 0;
@@ -34,7 +35,7 @@ int main () {
     for (int i = 1; i < 6; i++) {
         if (b[i] != c[all - 1]) c[all++] = b[i];
     }
-    
+
     int n;
     cin >> n;
 
@@ -82,8 +83,6 @@ int main () {
         if (ed) break;
     }
     cout << ans << endl;
-    
-    
 
 
     return 0;

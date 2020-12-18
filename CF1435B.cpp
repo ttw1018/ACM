@@ -17,7 +17,7 @@ int p[250005];
 int b[505];
 
 
-int main () {
+int main() {
     int T;
     scanf("%d", &T);
     while (T--) {
@@ -29,7 +29,7 @@ int main () {
                 p[a[i][j]] = i;
             }
         }
-        
+
         for (int j = 1; j < m; j++) {
             for (int i = 1; i <= n; i++) {
                 int x;

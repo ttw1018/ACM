@@ -20,7 +20,7 @@ typedef long long ll;
 //const int maxn = 2e5 + 5;
 
 
-int main () {
+int main() {
     int T;
     cin >> T;
     while (T--) {
@@ -32,12 +32,10 @@ int main () {
         }
         if (n % 3) {
             cout << "A" << endl;
-        }
-        else {
+        } else {
             cout << "B" << endl;
         }
     }
-
 
 
     return 0;

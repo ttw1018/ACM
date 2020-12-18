@@ -24,19 +24,20 @@ public:
      * @param num long长整型 正整数 n
      * @return long长整型
      */
-     const int mod = 1e9 + 7;
+    const int mod = 1e9 + 7;
 
-     ll qp (ll a, ll b) {
-         ll ans = 1;
-         while (b) {
-             if (b & 1) {
-                 ans = ans * a % mod;
-             }
-             b >>= 1;
-             a = a * a % mod;
-         }
-         return ans;
-     }
+    ll qp(ll a, ll b) {
+        ll ans = 1;
+        while (b) {
+            if (b & 1) {
+                ans = ans * a % mod;
+            }
+            b >>= 1;
+            a = a * a % mod;
+        }
+        return ans;
+    }
+
     long long cowModCount(long long num) {
         // write code here
         ll ans = 0;
@@ -55,10 +56,9 @@ public:
     }
 };
 
-int main () {
+int main() {
     Solution test = Solution();
     cout << test.cowModCount(5);
-
 
 
     return 0;

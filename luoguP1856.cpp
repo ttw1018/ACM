@@ -19,8 +19,10 @@ const int maxn = 2e5 + 5;
 
 struct Line {
     int l, r, h, v;
-    Line (int a = 0, int b = 0, int c = 0, int d = 0) : l(a), r(b), h(c), v(d) {}
-    bool operator < (const Line now) const {
+
+    Line(int a = 0, int b = 0, int c = 0, int d = 0) : l(a), r(b), h(c), v(d) {}
+
+    bool operator<(const Line now) const {
         if (h == now.h) {
             return l < now.l;
         }
@@ -37,9 +39,9 @@ struct node {
     int lflag, rflag;
 } t[maxn * 4];
 
-void build (int k, int l, int r) {
+void build(int k, int l, int r) {
     t[k].l = x[l], t[k].r = x[r];
-    if (r - l <= 1) return ;
+    if (r - l <= 1) return;
     int m = (l + r) >> 1;
     build(k * 2, l, m);
     build(k * 2 + 1, m, r);
@@ -50,8 +52,7 @@ void push(int k) {
         t[k].val = t[k].r - t[k].l;
         t[k].lflag = t[k].rflag = 1;
         t[k].num = 2;
-    }
-    else {
+    } else {
         t[k].val = t[k * 2].val + t[k * 2 + 1].val;
         t[k].lflag = t[k * 2].lflag;
         t[k].rflag = t[k * 2 + 1].rflag;
@@ -62,7 +63,7 @@ void push(int k) {
     }
 }
 
-void upd (int k, int l, int r, int v) {
+void upd(int k, int l, int r, int v) {
     if (t[k].l >= l && t[k].r <= r) {
         t[k].cnt += v;
         push(k);
@@ -73,7 +74,7 @@ void upd (int k, int l, int r, int v) {
     push(k);
 }
 
-int main () {
+int main() {
     int n;
     cin >> n;
     for (int i = 1; i <= n; i++) {

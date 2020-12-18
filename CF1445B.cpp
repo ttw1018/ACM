@@ -17,7 +17,7 @@ typedef long long ll;
 const int mod = 1e9 + 7;
 const int maxn = 1e5 + 5;
 
-int main () {
+int main() {
     int t;
     cin >> t;
     while (t--) {
@@ -25,7 +25,6 @@ int main () {
         cin >> a >> b >> c >> d;
         cout << max(a + b, c + d) << endl;
     }
-
 
 
     return 0;

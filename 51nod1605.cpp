@@ -22,7 +22,7 @@ typedef long long ll;
 
 int A[105][105];
 
-int main () {
+int main() {
     int T;
     cin >> T;
     while (T--) {
@@ -30,15 +30,14 @@ int main () {
         cin >> n >> m;
         int cnt = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++)  {
+            for (int j = 0; j < m; j++) {
                 cin >> A[i][j];
                 cnt += A[i][j];
             }
         }
         if (cnt & 1) {
             cout << "yadang" << endl;
-        }
-        else {
+        } else {
             cout << "xiawa" << endl;
         }
     }

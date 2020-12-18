@@ -15,7 +15,7 @@ const int mod = 1e9 + 7;
 int c[maxn][2];
 int cnt = 0;
 
-void add (int x) {
+void add(int x) {
     int now = 0;
     while (x) {
         int v = x & 1;
@@ -35,8 +35,7 @@ bool que(int x, int now) {
             return false;
         }
         return que(x >> 1, c[now][1]);
-    }
-    else {
+    } else {
         bool yes = 0;
         if (c[now][v]) yes |= que(x >> 1, c[now][v]);
         if (c[now][1]) yes |= que(x >> 1, c[now][1]);
@@ -46,7 +45,7 @@ bool que(int x, int now) {
 }
 
 
-int main () {
+int main() {
     int n, m;
     cin >> n >> m;
     for (int i = 1; i <= n; i++) {

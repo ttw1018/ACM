@@ -37,6 +37,7 @@ int find(int x) {
 }
 
 int siz[maxn];
+
 void uni(int x, int y) {
     x = find(x), y = find(y);
     if (x != y) {
@@ -70,7 +71,7 @@ void solve() {
         return;
     }
     queue<int> q;
-    while(!q.empty()) q.pop();
+    while (!q.empty()) q.pop();
     int cnt = 0;
     for (int i = 1; i <= n; i++) {
         c[i] = e[i].size();
@@ -103,7 +104,7 @@ void solve() {
         }
     }
 
-    while(!q.empty()) {
+    while (!q.empty()) {
         int now = q.front();
         q.pop();
         int flag = 1;
@@ -124,8 +125,7 @@ void solve() {
             }
             cout << endl;
             return;
-        }
-        else {
+        } else {
             for (auto i : e[now]) {
                 c[i]--;
                 c[now]--;
@@ -172,13 +172,12 @@ void solve() {
             }
         }
         cout << endl;
-    }
-    else
+    } else
         cout << -1 << endl;
 }
 
-int main () {
-    cin.tie(0) ;
+int main() {
+    cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(0);
     cin >> T;

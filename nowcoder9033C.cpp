@@ -31,7 +31,7 @@ ll qp(ll a, ll b) {
     return ans;
 }
 
-int main () {
+int main() {
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) cin >> a[i];
@@ -53,7 +53,7 @@ int main () {
     ll ans = 0;
     ll now = 1;
     for (int i = 1; i <= len; i++) {
-        while(p < n && a[p] < i) {
+        while (p < n && a[p] < i) {
             p++;
         }
 

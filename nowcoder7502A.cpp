@@ -15,7 +15,7 @@ ll dp[maxn][3];
 char s[maxn];
 
 
-int main () {
+int main() {
     int n;
     while (cin >> n) {
         cin >> (s + 1);
@@ -30,8 +30,7 @@ int main () {
             if (s[i] == '2') {
                 dp[i][0]++;
                 dp[i][2] += dp[i][1];
-            }
-            else if (s[i] == '0') {
+            } else if (s[i] == '0') {
                 dp[i][1] += dp[i][0];
                 ans += dp[i][2];
             }

@@ -18,7 +18,7 @@ bool vis[maxn];
 int prime[maxn];
 int tot;
 
-int main () {
+int main() {
 
     int n;
     scanf("%d", &n);
@@ -29,20 +29,20 @@ int main () {
         a[v]++;
     }
     int ans = 1;
-    
+
     for (int i = 2; i < maxn; i++) {
         if (!vis[i]) {
-            prime[tot++] = i;  
+            prime[tot++] = i;
         }
         for (int j = 0; j < tot && i * j < maxn; j++) {
             vis[i * prime[j]] = 1;
             a[i * prime[j]] += a[i];
-            if (i % prime[j] == 0) break; 
+            if (i % prime[j] == 0) break;
         }
     }
-    
+
     printf("%d\n", ans + a[1]);
-    
+
 
     return 0;
 }

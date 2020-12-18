@@ -16,7 +16,7 @@ using namespace std;
 typedef long long ll;
 
 
-int main () {
+int main() {
     int T;
     cin >> T;
     while (T--) {
@@ -24,8 +24,7 @@ int main () {
         cin >> n;
         if (n % 7 == 0 || n % 7 == 2) {
             cout << "B" << endl;
-        }
-        else {
+        } else {
             cout << "A" << endl;
         }
     }

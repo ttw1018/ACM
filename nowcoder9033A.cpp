@@ -12,7 +12,7 @@ typedef long long ll;
 const double eps = 1e-6;
 
 
-int main () {
+int main() {
     int n, m, p;
     while (cin >> n >> m >> p) {
 
@@ -35,7 +35,6 @@ int main () {
         ans = max(ans, 0);
         cout << ans << endl;
     }
-
 
 
     return 0;

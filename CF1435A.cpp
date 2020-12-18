@@ -14,8 +14,7 @@ const int mod = 1e9 + 7;
 int a[maxn];
 
 
-
-int main () {
+int main() {
     int T;
     cin >> T;
     while (T--) {
@@ -41,15 +40,14 @@ int main () {
             for (int i = 4; i <= n; i += 2) {
                 cout << -a[i + 1] << " " << a[i] << " ";
             }
-            
-        }
-        else {
+
+        } else {
             for (int i = 1; i <= n; i += 2) {
                 cout << -a[i + 1] << " " << a[i] << " ";
             }
         }
         cout << endl;
-        
+
 
     }
 
