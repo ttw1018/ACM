@@ -31,7 +31,7 @@ int main()
             continue;
         }
         
-        vector<int> ans;
+        vector<int> ans; 
 
         for (int i = 62; i >= 0; i--) {
             if (k & (ll(1) << i)) {
@@ -61,8 +61,8 @@ int main()
             cout << i << " ";
         }
         cout << endl;
-        
     }
 
+ 
     return 0;
 }

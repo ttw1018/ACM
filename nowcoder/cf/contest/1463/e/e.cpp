@@ -17,9 +17,4 @@ typedef long long ll;
 
 const int maxn = 1e5 + 5;
 
-int main() {
-  int T;
-  cin >> T;
-
-  return 0;
-}
+int main() { return 0; }
