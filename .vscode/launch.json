@@ -5,25 +5,42 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++.exe - 生成和调试活动文件",
-            "type": "cppdbg",
+            "name": "windows",
+            "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\a.exe",
-            "args": ["<in"],
+            "program": "cmd",
+            "args": [ 
+                "/C",
+                "${workspaceFolder}\\a.exe <  ${workspaceFolder}\\in",
+                "&",
+                "pause"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
+            "externalConsole": true,
             "preLaunchTask": "build"
         }
+        
+        // {
+        //     "name": "g++.exe - 生成和调试活动文件",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "${fileDirname}\\a.exe",
+        //     "args": [],
+        //     "stopAtEntry": false,
+        //     "cwd": "${workspaceFolder}",
+        //     "environment": [],
+        //     "externalConsole": true,
+        //     "MIMode": "gdb",
+        //     "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
+        //     "setupCommands": [
+        //         {
+        //             "description": "为 gdb 启用整齐打印",
+        //             "text": "-enable-pretty-printing",
+        //             "ignoreFailures": true
+        //         }
+        //     ],
+        //     "preLaunchTask": "build",
+        // }
     ]
 }

@@ -9,10 +9,10 @@
                 "-O3",
                 "-pthread",
                 "-static",
-                "-std=c++11",
+                "-std=c++17",
                 "${file}",
                 "-o",
-                "${fileDirname}\\a.exe"
+                "${workspaceFolder}\\a.exe"
             ],
             "options": {
                 "cwd": "D:\\mingw64\\bin"
