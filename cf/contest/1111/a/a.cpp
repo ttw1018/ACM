@@ -18,7 +18,7 @@ int main () {
 	while(cin >> a)
 		cout << a << endl;
 	
-    
+  
 
 
 
