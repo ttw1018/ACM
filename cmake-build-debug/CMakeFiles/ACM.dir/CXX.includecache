@@ -6,7 +6,25 @@
 
 #IncludeRegexTransform: 
 
-D:/ACM/nowcoder/9854/D.cpp
-bits/stdc++.h
+D:/ACM/cf/contest/1466/g/g.cpp
+algorithm
+-
+cmath
+-
+cstring
+-
+iostream
+-
+map
+-
+ostream
+-
+queue
+-
+set
+-
+stack
+-
+vector
 -
 

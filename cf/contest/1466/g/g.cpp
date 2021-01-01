@@ -67,9 +67,9 @@ int kmp(string s, string t) {
 
 ll cnt[30];
 
-ll a[maxn][30];
+ll a[100005][27];
 
-ll init() {
+void init() {
     for (int i = 0; i <= n; i++) {
         if (i != 0) {
             for (int j = 0; j < 26; j++) {
@@ -108,16 +108,16 @@ void solve() {
     string now1 = now.substr(now.length() - s.length() + 1, s.length() - 1);
     now = now.substr(0, s.length() - 1);
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 26; i++) {
         cnt[i] = kmp(s, now1 + char(i + 'a') + now);
         ll x = 0;
 
         if (k >= 1 && p >= 1)
-            x = (a[k - 1][i] - a[p - 1][i] + mod) % mod;
+            x = (a[k - 1][i] - a[p - 1][i] * qp(2, k - p) % mod + mod) % mod;
         else if (k >= 1) {
             x = a[k - 1][i];
         }
-        cout << x << endl;
+//        cout << x << endl;
         ans = (ans + cnt[i] * x % mod % mod) % mod;
     }
     cout << ans << endl;
