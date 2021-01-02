@@ -32,9 +32,5 @@ int main () {
     ll ans = (n * n - res * res + res - n) / 2;
     cout << ans << endl;
 
-
-
-
-
     return 0;
 }
