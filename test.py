@@ -1,17 +1,13 @@
-s = [23, 132, 19, 61, 190, 29, 4, 18, 40]
+from pyecharts.charts import Gauge
+from pyecharts import options as opts
 
-now = 100
-ans = 0
-for i in range(9):
-    mi = 100000
-    tmp = -1
-    for j in s:
-        if abs(j - now) < mi:
-            tmp = j
-            mi = abs(j - now)
-    s.remove(tmp)
-    ans += mi
-    now = tmp
-    print(tmp)
-print(ans / 9.0)
-print(s)
+g = (
+    Gauge()
+    .add("", [("完成率", 66.6)])
+    .set_global_opts(title_opts=opts.TitleOpts(title="Gauge-基本示例"))
+
+)
+g.render_notebook()
+
+
+print(g)

@@ -36,7 +36,7 @@ int bit_cnt;
 // 种群
 vector<double> group;
 
-// 获取编码
+// 获取码
 int getid(double x) { return (x - MI) / precision; }
 
 // 从编码到值
@@ -76,11 +76,6 @@ void cross() {
     double val1 = getval(id1 ^ b1);
     double val2 = getval(id2 ^ b1);
     if (val1 <= MA && val2 <= MA) {
-      group[p1] = val1;
-      group[p2] = val2;
-    }
-  }
-}
 
 // 变异
 void varite() {

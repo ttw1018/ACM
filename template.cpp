@@ -13,16 +13,9 @@ using namespace std;
 
 typedef long long ll;
 
-int main() { 
-  
+// const int mod = 1e9 + 7;
+// const int mod = 998244353;
 
+const int maxn = 1e5 + 5;
 
-
-
-
-
-
-
-  
-  return 0;
-}
+int main() { return 0; }

@@ -1,0 +1,17 @@
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <map>
+#include <memory>
+#include <vector>
+
+using namespace std;
+
+const int mod = 1e9 + 7;
+// const int mod = 998244353;
+
+const int maxn = 1e5 + 5;
+
+nt main () {
+}

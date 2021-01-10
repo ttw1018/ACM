@@ -1,61 +1,38 @@
-#include <iostream>
-#include <vector>
-#include <cstring>
-#include <map>
-#include <queue>
 #include <algorithm>
 #include <cmath>
-#include <stack>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <queue>
 #include <set>
+#include <vector>
 
 using namespace std;
 
-typedef long long ll;
+// const int mod = 1e9 + 7;
+// const int mod = 998244353
+// const int maxn = 1e5 + 5;
 
-//const int mod = 1e9 + 7;
-const int mod = 998244353;
+int a[105];
 
-const int maxn = 1e5 + 5;
+void max_heap(int *a, int siz) {}
 
-
-int a[maxn], b[maxn];
-
-int gcd (int a, int b) {
-  return b ? gcd(b, a % b) : a;
+void heap_sort(int n) {
+  for (int i = 2; i <= n; i++) {
+    int now = a[i];
+    swap(a[i], a[1]);
+    max_heap(a, i);
+  }
 }
 
-int main () {
+int main() {
   int n;
   cin >> n;
-  for (int i = 1; i <= n; i++) cin >> a[i];
-  for (int i = 1; i <= n; i++) cin >> b[i];
-  
-  for (int i = 1; i <= n; i++) {
-    for (int k = 1; k * k <= i; k++) {
-      if (i % k == 0) {
-        
-      }
-      
-    }
-    
+  for (int i = 1; i <= 10; i++) {
+    a[i] = rand() % 100;
   }
-  for (int i = 1; i < 100000; i++) {
-    cout << gcd (i, 100000) << endl;
-  }
-  
-  cout << (1 << 14) - 2 << endl;
-  cout << (1 << 21) - 2 << endl;
-  cout << pow(ll(2), 21) - 2 << endl;
-  
-  while (1) {
-    cout << "hello world" << endl;
-  }
-  
-  
-  
 
-
-
+  heap_sort(10);
 
   return 0;
 }
